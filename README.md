@@ -13,6 +13,4 @@ source venv/Scripts/activate
 
 pip install -r requirements.txt
 
-# Adding new packages to requirements.txt
-pip freeze > requirements.txt
 

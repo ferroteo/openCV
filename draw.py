@@ -5,6 +5,7 @@ import numpy as np
 #BLANK image
 blank = np.zeros((500,500,3),dtype='uint8')
 cv2.imshow('Blank image',blank)
+cv2.waitKey(0)
 
 
 ##################
@@ -16,14 +17,17 @@ cv2.imshow('Blank image',blank)
 #set green 
 blank[:] = 0,255,0
 cv2.imshow('green image',blank)
+cv2.waitKey(0)
 
 #set red 
 blank[:] = 0,0,255
 cv2.imshow('red image',blank)
+cv2.waitKey(0)
 
 #draw basic SHAPES
 blank[50:450 , 0:50] = 0,0,0
 cv2.imshow('black shape',blank)
+cv2.waitKey(0)
 
 
 
@@ -39,10 +43,12 @@ blank = np.zeros((500,500,3),dtype='uint8')
 # on , from , to , color , thickness
 cv2.rectangle(blank , (10,10) , (450,450), (0,250,0) , thickness=2)
 cv2.imshow(' ',blank)
+cv2.waitKey(0)
 
 #NB: if we want filled shapoe we use
 cv2.rectangle(blank , (10,10) , (450,450), (0,250,0) , thickness=cv2.FILLED)
 cv2.imshow(' ',blank)
+cv2.waitKey(0)
 
 #________________________
 #2. CIRCLE :
@@ -50,6 +56,7 @@ cv2.imshow(' ',blank)
 # on , center , radius , color , thickness
 cv2.circle(blank , (blank.shape[1]//2,blank.shape[0]//2) , 30, (250,0,0) , thickness=2)
 cv2.imshow(' ',blank)
+cv2.waitKey(0)
 
 #__________________________
 #3. STRAIGHT LINE :
@@ -57,7 +64,7 @@ cv2.imshow(' ',blank)
 # on , from , to , color , thickness
 cv2.line(blank , (10,10) , (450,450) , (0,0,255) , thickness=2)
 cv2.imshow(' ',blank)
-
+cv2.waitKey(0)
 
 ##################
 #  WRITE TEXT  

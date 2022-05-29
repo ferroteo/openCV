@@ -6,7 +6,7 @@ capture = cv2.VideoCapture("data\Videos\dog.mp4")
 
 
 ################
-# RESIZE VIDEO
+#   RESCALE
 ################
 
 def FrameRescale(frame,scale=0.5):
@@ -16,7 +16,10 @@ def FrameRescale(frame,scale=0.5):
 
     return cv2.resize(frame,dim,interpolation=cv2.INTER_AREA)
 
+#for IMAGES
+cv2.imshow("resized image", FrameRescale(img))
 
+#fro VIDEOS
 while True:
     isTrue, frame = capture.read()
 
@@ -29,11 +32,11 @@ capture.release()
 cv2.destroyAllWindows()
 
 
-#################
-# RESCALE IMAGE
-#################
+#for LIVE videos
+def ChangRes(width,height):
 
-#left 17.31
+    capture.set(3,width)
+    capture.set(4,height)
 
 
 

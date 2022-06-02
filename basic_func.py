@@ -1,12 +1,10 @@
-from configparser import Interpolation
 import cv2
-
-
 
 
 #################
 #  RESIZE
 #################
+
 img = cv2.imread("data\Photos\park.jpg")
 
 #basic
